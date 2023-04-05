@@ -9,9 +9,11 @@ import Footer from './components/Footer';
 const ViewLayout= ()=>{
     return(
         <>
+         <React.StrictMode>
        <Newheader/>
        <Body/>
        <Footer/>
+       </React.StrictMode>
       </>
     );
 }
