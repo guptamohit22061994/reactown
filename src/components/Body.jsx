@@ -37,19 +37,19 @@ console.log("render");
 
 if(!allRestaurants) return null;
 
-if(filteredrestaurants?.length === 0) 
-return <h1>No Result Match Found!!</h1>;
+// if(filteredrestaurants?.length === 0) 
+// return <h1>No Result Match Found!!</h1>;
 
     return allRestaurants?.length === 0 ? (
  <Shimmer/>
     ):(
         <>
-        <div className="d-flex justify-content-between ms-2 mt-2">
-        <div class="input-group">
+        <div className="d-flex justify-content-between ms-2 mt-5">
+        <div className="input-group">
         <input type="search" className="form-control" placeholder="search..." value={searchText} 
             onChange={(e)=>{
              setSearchText(e.target.value)}} required="required"/>
-      <div class="input-group-append">
+      <div className="input-group-append">
        
       <button className="btn-search input-group-text" onClick={()=>{
             const data= filterData(searchText, allRestaurants);
